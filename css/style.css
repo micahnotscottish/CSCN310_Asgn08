@@ -1,0 +1,144 @@
+/* Template Styles */
+:root {
+    --g: #6d6666;
+    --lg: #b4adad;
+    --t: #eedab5;
+    --r: #855b5b;
+    --b: #362323;
+}
+
+
+body {
+    color: var(--lg);
+    background-color: var(--t);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container {
+    position: relative;
+    z-index: 10;
+    margin: 20px auto 20px auto;
+    width: 1040px; /* default without padding is 1040px */
+    height: auto;
+    /* padding: 15px;
+    border: 1px solid #111; */
+
+    /* CSS Grid */
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 200px);
+    grid-auto-rows: 200px 
+                     75px 
+                   auto 
+                    100px;
+    grid-template-areas: 
+        "a b b b b"
+        "c c c c c"
+        "d d d d d"
+        "e e e e e";
+}
+
+#a, #b, #c, #d, #e {
+    z-index: 15;
+    border: 0px solid #111;
+}
+
+#a {
+    grid-area: a;
+    background-color: var(--r);
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px var(--b);
+
+    img {
+        height: 100%;
+    }
+}
+
+#b {
+    z-index: 10;
+    margin-left: -35px;
+    grid-area: b;
+    border-radius: 15px;
+    border: 8px solid var(--r);
+    border-left: none;
+    box-shadow: 10px 10px 10px var(--b);
+
+    h1 {
+        color: var(--r);
+        font-size: 5em;
+    }
+}
+
+#c {
+    grid-area: c;
+    a {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: var(--r);
+        font-weight: bold;
+        font-size: 2em;
+        padding: 8px;
+        background-color: var(--lg);
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px var(--b);
+    }
+}
+
+#d {
+    grid-area: d;
+    background-color: var(--g);
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px var(--b);
+    display: flex;
+    flex-direction: row;
+
+
+    img {
+        width: 100%;
+    }
+
+    #aboutimg01 {
+        width: 35%;
+        height: auto;
+    }
+
+    p {
+        font-size: 2em;
+        color: var(--r);
+        background-color: var(--t);
+        border-radius: 15px;
+        border: 8px solid var(--r);
+        margin: 20px;
+        padding: 20px;
+        box-shadow: 0px 10px 10px var(--b);
+    }
+}
+
+#e {
+    grid-area: e;
+
+    p {
+        color: var(--g);
+        border-radius: 15px;
+        border: 3px solid var(--r);
+        padding: 8px;
+    }
+
+}
+
+
+/* Classes */
+
+.rmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
