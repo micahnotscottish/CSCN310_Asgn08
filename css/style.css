@@ -90,7 +90,7 @@ body {
     border-radius: 15px;
     box-shadow: 10px 10px 10px var(--b);
 
-    div {
+    #aboutdiv {
         display: flex;
         flex-direction: row;
 
@@ -109,8 +109,8 @@ body {
         align-self: center;
     }
 
-    p {
-        font-size: 2em;
+    .aboutp {
+        font-size: 1.5em;
         color: var(--r);
         background-color: var(--t);
         border-radius: 15px;
@@ -120,7 +120,7 @@ body {
         box-shadow: 0px 10px 10px var(--b);
     }
 
-    h1 {
+    .title {
         font-size: 3em;
         color: var(--r);
         background-color: var(--t);
@@ -131,6 +131,64 @@ body {
         padding-right: 30px;
         
     }
+
+
+    .product {
+        height: 200px;
+        background-color: var(--r);
+        border-radius: 15px;
+        margin-bottom: 20px;
+        margin: 10px;
+
+        .pit {
+            height: 200px;
+            width: 200px;
+
+            h2 {
+                font-size: 2em;
+                background-color: var(--t);
+                border-radius: 10px;
+                padding: 5px;
+                width: 70%;
+                text-align: center;
+                color: var(--b);
+                margin-bottom: 10px;
+            }
+
+            img {
+                height: 60%;
+                width: auto;
+            }
+        }
+
+        .pd {
+            width: 600px;
+            h3 {
+                font-size: 1.5em;
+                margin: 20px;
+            }
+
+            p {
+                margin: 20px;
+                width: 400px;                
+            }
+        }
+
+        .price {
+            width: 200px;
+            text-align: center;
+            h1 {
+                font-size: 1.1em;
+                color: var(--r);
+                border-radius: 10px;
+                padding: 8px;
+                margin: 10px;
+                width: 80%;
+                background-color: var(--t);
+            }
+        }
+    }
+    
 }
 
 #e {
